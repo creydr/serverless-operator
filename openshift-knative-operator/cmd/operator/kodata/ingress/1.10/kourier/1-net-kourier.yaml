@@ -128,7 +128,7 @@ data:
                 endpoint:
                   address:
                     socket_address:
-                      address: "net-kourier-controller.knative-serving-ingress"
+                      address: "net-kourier-controller.knative-serving"
                       port_value: 18000
           type: STRICT_DNS
     admin:
@@ -401,7 +401,7 @@ spec:
               cpu: 200m
               memory: 200Mi
             limits:
-              cpu: 500m
+              cpu: "1"
               memory: 500Mi
       restartPolicy: Always
       serviceAccountName: net-kourier
