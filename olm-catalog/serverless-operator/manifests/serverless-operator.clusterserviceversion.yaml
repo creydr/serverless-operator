@@ -807,7 +807,7 @@ spec:
                 containers:
                   - name: knative-operator
                     # This reference will be replaced in local builds and CI via hack/lib/catalogsource.bash.
-                    image: registry.ci.openshift.org/knative/serverless-openshift-knative-operator:main
+                    image: registry.ci.openshift.org/knative/serverless-openshift-knative-operator:test-install-certmanager-in-e2e-kafka-test
                     readinessProbe:
                       periodSeconds: 1
                       httpGet:
@@ -961,7 +961,7 @@ spec:
                 containers:
                   - name: knative-openshift
                     # This reference will be replaced in local builds and CI via hack/lib/catalogsource.bash.
-                    image: registry.ci.openshift.org/knative/serverless-knative-operator:main
+                    image: registry.ci.openshift.org/knative/serverless-knative-operator:test-install-certmanager-in-e2e-kafka-test
                     imagePullPolicy: Always
                     readinessProbe:
                       httpGet:
@@ -1132,7 +1132,7 @@ spec:
                 containers:
                   - name: knative-openshift-ingress
                     # This reference will be replaced in local builds and CI via hack/lib/catalogsource.bash.
-                    image: registry.ci.openshift.org/knative/serverless-ingress:main
+                    image: registry.ci.openshift.org/knative/serverless-ingress:test-install-certmanager-in-e2e-kafka-test
                     imagePullPolicy: Always
                     ports:
                       - containerPort: 9090
@@ -1282,13 +1282,13 @@ spec:
   relatedImages:
     - name: knative-operator
       # This reference will be replaced in local builds and CI via hack/lib/catalogsource.bash.
-      image: registry.ci.openshift.org/knative/serverless-openshift-knative-operator:main
+      image: registry.ci.openshift.org/knative/serverless-openshift-knative-operator:test-install-certmanager-in-e2e-kafka-test
     - name: knative-openshift
       # This reference will be replaced in local builds and CI via hack/lib/catalogsource.bash.
-      image: registry.ci.openshift.org/knative/serverless-knative-operator:main
+      image: registry.ci.openshift.org/knative/serverless-knative-operator:test-install-certmanager-in-e2e-kafka-test
     - name: knative-openshift-ingress
       # This reference will be replaced in local builds and CI via hack/lib/catalogsource.bash.
-      image: registry.ci.openshift.org/knative/serverless-ingress:main
+      image: registry.ci.openshift.org/knative/serverless-ingress:test-install-certmanager-in-e2e-kafka-test
     - name: "IMAGE_queue-proxy"
       image: "registry.ci.openshift.org/openshift/knative-serving-queue:knative-v1.11"
     - name: "IMAGE_activator"
