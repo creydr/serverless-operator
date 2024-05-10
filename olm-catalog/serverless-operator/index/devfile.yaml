@@ -24,4 +24,4 @@ components:
 commands:
   - id: build-image
     apply:
-      component: image-build"
+      component: image-build
